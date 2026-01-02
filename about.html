@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. https://webflow.com -->
+<!-- Last Published: Tue Jun 17 2025 09:31:11 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="ecomission-wbs.webflow.io" data-wf-page="676a95654e1fe50cda7319b7" data-wf-site="676a95654e1fe50cda7319c6" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>About Us - EcoMission - Webflow HTML website template</title>
+    <meta content="Learn about our mission, team, and commitment to sustainable forest restoration using AI technology." name="description" />
+    <meta content="About Us - EcoMission" property="og:title" />
+    <meta content="Learn about our mission, team, and commitment to sustainable forest restoration using AI technology." property="og:description" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link href="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/css/ecomission-wbs.webflow.shared.19c4fb91e.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* Set Poppins as default font */
+        :root {
+            --font-family--body: 'Poppins', Arial, sans-serif !important;
+            --font-family--heading: 'Poppins', Arial, sans-serif !important;
+            --primary-color: #163020;
+            --secondary-color: #2d5a3d;
+            --text-color: #333;
+            --text-light: #555;
+        }
+        body, 
+        p, 
+        h1, 
+        h2, 
+        h3, 
+        h4, 
+        h5, 
+        h6, 
+        a, 
+        span, 
+        div, 
+        button, 
+        input, 
+        textarea, 
+        select, 
+        label, 
+        li, 
+        td, 
+        th {
+            font-family: 'Poppins', Arial, sans-serif !important;
+        }
+        
+        /* Remove white space at top - make hero banner extend to top */
+        .navbar-full {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 1000 !important;
+            padding-top: 10px !important;
+            margin-top: 0 !important;
+            background-color: transparent !important;
+        }
+        .about-hero-section {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        body {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+        }
+        
+        /* About Us Hero Section */
+        .about-hero-section {
+            background: linear-gradient(135deg, #163020 0%, #2d5a3d 100%);
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .about-hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+            opacity: 0.6;
+        }
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 20px;
+        }
+        .about-hero-title {
+            font-size: 64px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 24px;
+            position: relative;
+            display: inline-block;
+        }
+        .about-hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background-color: #ffffff;
+            border-radius: 2px;
+        }
+        .about-hero-description {
+            font-size: 20px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .about-hero-button {
+            background-color: #ffffff;
+            color: #163020;
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .about-hero-button:hover {
+            background-color: rgba(255, 255, 255, 0.95);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Who Are We Section */
+        .who-are-we-section {
+            padding: 100px 0;
+            background-color: #ffffff;
+        }
+        .who-are-we-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .who-are-we-illustration {
+            position: relative;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 16px;
+            padding: 40px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .who-are-we-content h2 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #163020;
+            margin-bottom: 24px;
+        }
+        .who-are-we-content h3 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #163020;
+            margin-bottom: 20px;
+        }
+        .who-are-we-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 24px;
+        }
+        .who-are-we-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .who-are-we-list li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 16px;
+            padding-left: 32px;
+            position: relative;
+        }
+        .who-are-we-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #163020;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        /* Brand Development Section */
+        .brand-development-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+        .brand-development-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .brand-development-content h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #163020;
+            margin-bottom: 24px;
+        }
+        .brand-development-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        /* Service Features Section */
+        .service-features-section {
+            padding: 100px 0;
+            background-color: #ffffff;
+        }
+        .service-features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        .service-feature-card {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(22, 48, 32, 0.08);
+            border: 1px solid rgba(22, 48, 32, 0.1);
+            transition: all 0.3s ease;
+        }
+        .service-feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(22, 48, 32, 0.15);
+        }
+        .service-feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #163020 0%, #2d5a3d 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 28px;
+        }
+        .service-feature-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #163020;
+            margin-bottom: 16px;
+        }
+        .service-feature-card p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        /* Statistics Section */
+        .statistics-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #163020 0%, #2d5a3d 100%);
+        }
+        .statistics-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .statistics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .statistic-card {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .statistic-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .statistic-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .statistic-label {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 500;
+        }
+        
+        /* Why Choose Section */
+        .why-choose-section {
+            padding: 100px 0;
+            background-color: #ffffff;
+        }
+        .why-choose-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        .why-choose-header h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #163020;
+            margin-bottom: 16px;
+        }
+        .why-choose-header p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+        }
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        .why-choose-card {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(22, 48, 32, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .why-choose-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(22, 48, 32, 0.15);
+        }
+        .why-choose-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, #163020 0%, #2d5a3d 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+        }
+        .why-choose-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #163020;
+            margin-bottom: 16px;
+        }
+        .why-choose-card p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        /* Team Member Section */
+        .team-member-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+        .team-member-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .team-member-image {
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+            box-shadow: 0 10px 40px rgba(22, 48, 32, 0.2);
+        }
+        .team-member-content h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #163020;
+            margin-bottom: 24px;
+        }
+        .team-member-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        /* Responsive Styles */
+        @media screen and (max-width: 991px) {
+            .navbar-full {
+                padding-top: 15px !important;
+            }
+            .about-hero-section {
+                min-height: 80vh;
+                padding: 120px 0 80px;
+            }
+            .about-hero-title {
+                font-size: 48px;
+            }
+            .who-are-we-grid,
+            .team-member-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .service-features-grid,
+            .why-choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .statistics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .navbar-full {
+                padding-top: 12px !important;
+                padding-bottom: 0 !important;
+            }
+            .about-hero-section {
+                min-height: 70vh;
+                padding: 100px 0 60px;
+            }
+            .about-hero-title {
+                font-size: 36px;
+            }
+            .about-hero-description {
+                font-size: 18px;
+            }
+            .who-are-we-section,
+            .service-features-section,
+            .statistics-section,
+            .why-choose-section,
+            .team-member-section {
+                padding: 60px 0;
+            }
+            .who-are-we-content h2,
+            .brand-development-content h2,
+            .statistics-title,
+            .why-choose-header h2,
+            .team-member-content h2 {
+                font-size: 32px;
+            }
+            .service-features-grid,
+            .why-choose-grid,
+            .statistics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media screen and (max-width: 479px) {
+            .navbar-full {
+                padding-top: 10px !important;
+            }
+            .about-hero-section {
+                min-height: 60vh;
+                padding: 90px 0 50px;
+            }
+            .about-hero-title {
+                font-size: 28px;
+            }
+            .about-hero-description {
+                font-size: 16px;
+            }
+            .about-hero-button {
+                padding: 14px 32px;
+                font-size: 14px;
+            }
+        }
+        
+        /* Hide Webflow badge */
+        .w-webflow-badge {
+            display: none !important;
+        }
+    </style>
+    <script type="text/javascript">
+        ! function(o, c) {
+            var n = c.documentElement,
+                t = " w-mod-";
+            n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+        }(window, document);
+    </script>
+    <link href="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/677524890f1e597f5d3ecd6a_favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/6775248ca6738a01c9a665b8_webclip.png" rel="apple-touch-icon" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-full w-nav" style="margin-top: 0; padding-top: 10px;">
+        <div class="container-full w-container">
+            <div class="w-layout-grid grid-nav">
+                <a href="index.html" id="w-node-f31c4b56-6a83-8f28-eea0-9f1bf106401d-f106401a" class="brand w-nav-brand">
+                    <img src="cdn.prod.website-files.com/676a95654e1fe50cda7319c6/frilogclear.png" loading="eager" alt="Logo" class="logo" style="max-width: 120px; height: auto;"/>
+                </a>
+                <div id="w-node-f31c4b56-6a83-8f28-eea0-9f1bf106406a-f106401a" class="right-nav">
+                    <nav role="navigation" id="w-node-f31c4b56-6a83-8f28-eea0-9f1bf106401f-f106401a" class="nav-menu w-nav-menu">
+                        <a href="index.html" class="nav-link w-nav-link">Home</a>
+                        <a href="index.html#about" aria-current="page" class="nav-link w-nav-link w--current">About</a>
+                        <a href="index.html#how-it-works" class="nav-link w-nav-link">How Forest Restored A.I Works</a>
+                        <a href="index.html#outcomes" class="nav-link w-nav-link">Outcomes</a>
+                        <a href="contact.html" class="nav-link w-nav-link">Contact Us</a>
+                    </nav>
+                    <a href="/contact" class="button-primary-2 mobile-hide w-button">Get Started</a>
+                    <div class="menu-button w-nav-button">
+                        <div class="w-icon-nav-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Hero Section -->
+    <section class="about-hero-section">
+        <div class="w-layout-blockcontainer container w-container">
+            <div class="about-hero-content">
+                <h1 class="about-hero-title">About Us</h1>
+                <p class="about-hero-description">
+                    We are a multi-award-winning digital consulting and engineering firm that provides end-to-end software solutions to enterprises. Our passion for innovation drives us to create sustainable solutions that make a real impact.
+                </p>
+                <a href="/contact" class="about-hero-button">Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Are We Section -->
+    <section class="who-are-we-section">
+        <div class="w-layout-blockcontainer container w-container">
+            <div class="who-are-we-grid">
+                <div class="who-are-we-illustration">
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(22, 48, 32, 0.05) 0%, rgba(45, 90, 61, 0.05) 100%); border-radius: 12px;">
+                        <div style="font-size: 120px; color: #163020; opacity: 0.3;">🌳</div>
+                    </div>
+                </div>
+                <div class="who-are-we-content">
+                    <h2>Who Are We?</h2>
+                    <h3>We are highly passionate about Web and Mobile application Development Services.</h3>
+                    <p>
+                        We specialize in app design, web development, digital marketing, e-commerce solutions, and cloud development. Our team combines technical expertise with creative vision to deliver solutions that drive business growth and environmental sustainability.
+                    </p>
+                    <ul class="who-are-we-list">
+                        <li>Innovative technology solutions tailored to your needs</li>
+                        <li>Expert team with years of industry experience</li>
+                        <li>Commitment to sustainable and eco-friendly practices</li>
+                        <li>End-to-end support from concept to deployment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Development Section -->
+    <section class="brand-development-section">
+        <div class="w-layout-blockcontainer container w-container">
+            <div class="brand-development-content">
+                <h2>How We Aid in Brand Development</h2>
+                <p>
+                    We have impressive features to build your website creatively and fast. Our approach has been created with such care that it is ready to suit all of your requirements. We combine cutting-edge technology with sustainable practices to help your brand grow while making a positive environmental impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Features Section -->
+    <section class="service-features-section">
+        <div class="w-layout-blockcontainer container w-container">
+            <div class="service-features-grid">
+                <div class="service-feature-card">
+                    <div class="service-feature-icon">👥</div>
+                    <h3>Client Centric Approach</h3>
+                    <p>We prioritize your needs and goals, ensuring every solution is tailored to deliver maximum value and impact for your business.</p>
+                </div>
+                <div class="service-feature-card">
+                    <div class="service-feature-icon">🤝</div>
+                    <h3>Effective Collaboration</h3>
+                    <p>We work closely with you throughout the entire process, maintaining transparent communication and fostering strong partnerships.</p>
+                </div>
+                <div class="service-feature-card">
+                    <div class="service-feature-icon">⏱️</div>
+                    <h3>On-Time Delivery</h3>
+                    <p>We understand the importance of deadlines and consistently deliver projects on time without compromising quality.</p>
+                </div>
+                <div class="service-feature-card">
+                    <div class="service-feature-icon">💡</div>
+                    <h3>Innovative Solutions</h3>
+                    <p>We leverage the latest technologies and best practices to create innovative solutions that set you apart from the competition.</p>
+                </div>
+                <div class="service-feature-card">
+                    <div class="service-feature-icon">🌱</div>
+                    <h3>Sustainable Practices</h3>
+                    <p>We integrate eco-friendly approaches into our development process, helping you build a sustainable digital presence.</p>
+                </div>
+                <div class="service-feature-card">
+                    <div class="service-feature-icon">🎯</div>
+                    <h3>Quality Assurance</h3>
+                    <p>Rigorous testing and quality control ensure that every solution we deliver meets the highest standards of excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics-section">
+        <div class="w-layout-blockcontainer container w-container">
+            <h2 class="statistics-title">We Provide with</h2>
+            <div class="statistics-grid">
+                <div class="statistic-card">
+                    <div class="statistic-number">150+</div>
+                    <div class="statistic-label">Professionals Team</div>
+                </div>
+                <div class="statistic-card">
+                    <div class="statistic-number">10+</div>
+                    <div class="statistic-label">Years of Experience</div>
+                </div>
+                <div class="statistic-card">
+                    <div class="statistic-number">120K</div>
+                    <div class="statistic-label">Projects Delivered</div>
+                </div>
+                <div class="statistic-card">
+                    <div class="statistic-number">50K</div>
+                    <div class="statistic-label">Happy Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose-section">
+        <div class="w-layout-blockcontainer container w-container">
+            <div class="why-choose-header">
+                <h2>Why Choose Us?</h2>
+                <p>Here are some reasons why customers choose us over competitors</p>
+            </div>
+            <div class="why-choose-grid">
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">🛡️</div>
+                    <h3>Assured Services</h3>
+                    <p>We guarantee quality and reliability in every project, backed by comprehensive support and maintenance services.</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">💰</div>
+                    <h3>Cost-effective Solution</h3>
+                    <p>We deliver exceptional value through efficient processes and optimized solutions that maximize your return on investment.</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="why-choose-icon">⏰</div>
+                    <h3>On-time Delivery</h3>
+                    <p>Our proven project management ensures timely completion of all projects, helping you meet your business objectives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Member Section -->
+    <section class="team-member-section">
+        <div class="w-layout-blockcontainer container w-container">
+            <div class="team-member-grid">
+                <div class="team-member-content">
+                    <h2>Our Leadership</h2>
+                    <p>
+                        With over 14+ years of experience in developing and maintaining scalable web and mobile applications, our leadership team brings deep expertise in technology, sustainability, and business strategy. We are committed to driving innovation while creating positive environmental and social impact.
+                    </p>
+                    <p style="margin-top: 20px;">
+                        Our team combines technical excellence with a passion for sustainability, ensuring that every solution we deliver not only meets your business needs but also contributes to a better future for our planet.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/676bac01d654a32ec16ff7af_hero-image.avif" alt="Team Member" class="team-member-image" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-full w-container">
+            <div class="w-layout-grid grid-footer">
+                <div id="w-node-_9807520c-65b7-e828-71bd-909a6cfe182b-6cfe1801" data-w-id="9807520c-65b7-e828-71bd-909a6cfe182b" class="footer-item">
+                    <a href="index.html" id="w-node-_9807520c-65b7-e828-71bd-909a6cfe182c-6cfe1801" class="brand w-inline-block">
+                        <img src="cdn.prod.website-files.com/676a95654e1fe50cda7319c6/frilogclear.png" loading="eager" alt="Logo" class="footer-logo"/>
+                    </a>
+                    <div class="footer-subscribe-form">
+                        <h2 class="subscribe-title">Subscribe to our newsletter.</h2>
+                        <div class="no-margin w-form">
+                            <form id="wf-form-Subscribe-Form" name="wf-form-Subscribe-Form" data-name="Subscribe Form" method="get" class="form-subscribe" data-wf-page-id="676a95654e1fe50cda7319b7" data-wf-element-id="9807520c-65b7-e828-71bd-909a6cfe1832">
+                                <input class="form-input form-input-subscribe w-input" maxlength="256" name="Footer-Email" data-name="Footer Email" placeholder="Enter your email address" type="email" id="Footer-Email" required="" />
+                                <input type="submit" data-wait="Please wait..." class="button-primary-1 w-button" value="Subscribe now!" />
+                            </form>
+                            <div class="success-message w-form-done">
+                                <div>Thank you! Your submission has been received!</div>
+                            </div>
+                            <div class="error-message w-form-fail">
+                                <div>Oops! Something went wrong while submitting the form.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="w-node-_9807520c-65b7-e828-71bd-909a6cfe1805-6cfe1801" data-w-id="9807520c-65b7-e828-71bd-909a6cfe1805" class="footer-item">
+                    <h3 class="footer-title">Pages</h3>
+                    <div class="footer-divider"></div>
+                    <div class="w-layout-grid grid-footer-menu">
+                        <div class="footer-links">
+                            <a href="index.html" class="footer-link">Home</a>
+                            <a href="index.html#about" aria-current="page" class="footer-link w--current">About</a>
+                            <a href="index.html#how-it-works" class="footer-link">How Forest Restored A.I Works</a>
+                            <a href="index.html#outcomes" class="footer-link">Outcomes</a>
+                            <a href="contact.html" class="footer-link">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="w-node-c01e8265-d940-d363-923b-0a4295472f72-6cfe1801" data-w-id="c01e8265-d940-d363-923b-0a4295472f72" class="footer-item">
+                    <h4 class="footer-title">Services</h4>
+                    <div class="footer-divider"></div>
+                    <div class="w-layout-grid grid-footer-menu">
+                        <div class="footer-links">
+                            <a href="/services" class="footer-link">Web Development</a>
+                            <a href="/services" class="footer-link">Mobile App Development</a>
+                            <a href="/services" class="footer-link">Digital Marketing</a>
+                            <a href="/services" class="footer-link">E-commerce Solutions</a>
+                            <a href="/services" class="footer-link">Cloud Development</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="w-node-dcf76e91-ad29-c846-8b7b-73ba4ef6b76b-6cfe1801" data-w-id="dcf76e91-ad29-c846-8b7b-73ba4ef6b76b" class="footer-item">
+                    <h5 class="footer-title">Contact us</h5>
+                    <div class="footer-divider"></div>
+                    <div class="footer-contact-item">
+                        <img src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/676b9a15456275e185a821e9_call-icon.svg" loading="eager" alt="Call Icon" class="footer-icon" />
+                        <div class="footer-contact-link-wrap">
+                            <a href="tel:+254727159347" class="footer-contact-link">+254 727 159347</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <img src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/676b9a15fd3af79779d2173d_email-icon.svg" loading="eager" alt="Email Icon" class="footer-icon" />
+                        <a href="mailto:info@forestrestored.com" class="footer-contact-link">info@forestrestored.com</a>
+                    </div>
+                    <div class="footer-contact-item last">
+                        <img src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/676b9a15cc820abf4d03df4c_location-icon.svg" loading="eager" alt="Location Icon" class="footer-icon" />
+                        <div>Climate Centre</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-horizontal"></div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">Designed by <a href="https://webestica.com/" target="_blank" class="copyright-link">Webestica</a>, Powered by <a href="https://webflow.com/" target="_blank" class="copyright-link">Webflow</a></p>
+            <div class="footer-social-inline">
+                <a href="https://www.facebook.com/" target="_blank" class="footer-social-link w-inline-block">
+                    <img src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/676b94ce674000644fab14d3_facebook-icon.svg" loading="eager" alt="Facebook Icon" class="footer-social-icon"/>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="footer-social-link w-inline-block">
+                    <img src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/676b94cff5b5c02094afc0b2_instagram-icon.svg" loading="eager" alt="Instagram Icon" class="footer-social-icon" />
+                </a>
+                <a href="https://in.linkedin.com/" target="_blank" class="footer-social-link w-inline-block">
+                    <img src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/676b94cef3bb96192d22a090_linkedin-icon.svg" loading="eager" alt="Linkedin Icon" class="footer-social-icon"/>
+                </a>
+                <a href="https://twitter.com/" target="_blank" class="footer-social-link w-inline-block">
+                    <img src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/676b94ce2b7086a5f03e8e08_twitter-icon.svg" loading="eager" alt="Twitter Icon" class="footer-social-icon"/>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=676a95654e1fe50cda7319c6" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/js/webflow.schunk.36b8fb49256177c8.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/js/webflow.schunk.e48b57a2988cecfa.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/js/webflow.schunk.61b534daaaeddbc7.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/js/webflow.schunk.9dfb96661114d3db.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/676a95654e1fe50cda7319c6/js/webflow.d5531d8e.118476124b9bab60.js" type="text/javascript"></script>
+</body>
+
+</html>
+
