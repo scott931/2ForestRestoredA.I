@@ -187,16 +187,73 @@
             background: #f5f5f5;
             border-radius: 8px;
             padding: 16px;
-            min-height: 300px;
+            min-height: 400px;
+            height: 500px;
             border: 2px solid #e0e0e0;
+            display: flex;
+            align-items: stretch;
+            justify-content: stretch;
         }
         
-        .demo-screen-content {
+        .demo-image-carousel {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .demo-carousel-track {
+            display: flex;
+            width: 600%;
+            animation: scroll 9.2s linear infinite;
+            height: 100%;
+            will-change: transform;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .demo-image-carousel:hover .demo-carousel-track {
+            animation-play-state: paused;
+        }
+        
+        .demo-carousel-image {
+            width: 16.666666%;
+            min-width: 16.666666%;
+            max-width: 16.666666%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+            flex-grow: 0;
+            display: block;
             background: #ffffff;
-            border-radius: 4px;
-            padding: 16px;
-            font-size: 12px;
-            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            32.6% {
+                transform: translateX(0);
+            }
+            33.33% {
+                transform: translateX(-16.666%);
+            }
+            65.93% {
+                transform: translateX(-16.666%);
+            }
+            66.66% {
+                transform: translateX(-33.333%);
+            }
+            99.26% {
+                transform: translateX(-33.333%);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
         }
         
         .demo-screen-sidebar {
@@ -733,34 +790,15 @@
                     <div class="demo-visual-container">
                         <div class="demo-laptop-visual">
                             <div class="demo-laptop-screen">
-                                <div class="demo-screen-content">
-                                    <div class="demo-screen-sidebar">
-                                        <div class="demo-screen-sidebar-item">Dashboard</div>
-                                        <div class="demo-screen-sidebar-item">Projects</div>
-                                        <div class="demo-screen-sidebar-item">My Tasks</div>
-                                        <div class="demo-screen-sidebar-item">Monitoring</div>
-                                        <div class="demo-screen-sidebar-item">Locations</div>
-                                        <div class="demo-screen-sidebar-item">Forms</div>
-                                        <div class="demo-screen-sidebar-item">Protocols</div>
-                                        <div class="demo-screen-sidebar-item">Settings</div>
-                                    </div>
-                                    <div class="demo-screen-main">
-                                        <div style="font-weight: 600; margin-bottom: 12px; font-size: 14px;">Projects</div>
-                                        <div class="demo-screen-project">
-                                            <div class="demo-screen-project-title">Forest Restoration - Ngong</div>
-                                            <div class="demo-screen-project-details">Owner: Forest Team | Trials: 12 | Status: Active</div>
-                                        </div>
-                                        <div class="demo-screen-project">
-                                            <div class="demo-screen-project-title">Mangrove Conservation Project</div>
-                                            <div class="demo-screen-project-details">Owner: Coastal Team | Trials: 8 | Status: Monitoring</div>
-                                        </div>
-                                        <div class="demo-screen-project">
-                                            <div class="demo-screen-project-title">Biodiversity Tracking Initiative</div>
-                                            <div class="demo-screen-project-details">Owner: Research Team | Trials: 15 | Status: Active</div>
-                                        </div>
-                                        <div class="demo-screen-project">
-                                            <div class="demo-screen-project-title">Carbon Sequestration Program</div>
-                                            <div class="demo-screen-project-details">Owner: Climate Team | Trials: 20 | Status: Planning</div>
+                                <div>
+                                    <div class="demo-image-carousel">
+                                        <div class="demo-carousel-track">
+                                            <img src="cdn.prod.website-files.com/676a95654e1fe50cda7319c6/slidedemo/Screenshot%202026-01-03%20at%2019.02.22.png" alt="Demo Screenshot 1" class="demo-carousel-image" />
+                                            <img src="cdn.prod.website-files.com/676a95654e1fe50cda7319c6/slidedemo/Screenshot%202026-01-03%20at%2019.02.43.png" alt="Demo Screenshot 2" class="demo-carousel-image" />
+                                            <img src="cdn.prod.website-files.com/676a95654e1fe50cda7319c6/slidedemo/Screenshot%202026-01-03%20at%2019.02.56.png" alt="Demo Screenshot 3" class="demo-carousel-image" />
+                                            <img src="cdn.prod.website-files.com/676a95654e1fe50cda7319c6/slidedemo/Screenshot%202026-01-03%20at%2019.02.22.png" alt="Demo Screenshot 1" class="demo-carousel-image" />
+                                            <img src="cdn.prod.website-files.com/676a95654e1fe50cda7319c6/slidedemo/Screenshot%202026-01-03%20at%2019.02.43.png" alt="Demo Screenshot 2" class="demo-carousel-image" />
+                                            <img src="cdn.prod.website-files.com/676a95654e1fe50cda7319c6/slidedemo/Screenshot%202026-01-03%20at%2019.02.56.png" alt="Demo Screenshot 3" class="demo-carousel-image" />
                                         </div>
                                     </div>
                                 </div>
